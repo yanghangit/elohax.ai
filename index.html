@@ -23,9 +23,12 @@
       padding: 40px 32px;
       text-align: center;
       box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+      max-width: 640px;
+      width: 90%;
     }
     h1 {
       font-size: 2.6em;
+      margin-top: 20px;
       margin-bottom: 16px;
       letter-spacing: 2px;
     }
@@ -50,6 +53,24 @@
     .button:hover {
       background: #c9ada7;
     }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      margin-bottom: 28px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
     @media (max-width: 480px) {
       .container {
         padding: 24px 8px;
@@ -62,10 +83,21 @@
 </head>
 <body>
   <div class="container">
+    <!-- YouTube Video Section (moved to top) -->
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/zdBPz0APzRU" 
+              title="DeepDrug Video" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
+
     <h1>Coming Soon</h1>
     <p>We're working on something awesome at ElohaX.<br>
        In the meantime, visit our main website:</p>
     <a href="https://www.eee.hku.hk/ai-wise/" class="button" target="_blank" rel="noopener">HKU-AI WiSe</a>
+
     <p style="margin-top:28px; font-size:0.95em; color:#a9a9a9;">
       &copy; 2025 ElohaX. All rights reserved.<br>
     </p>
